@@ -1,0 +1,105 @@
+*ExtractLinks.txt*      Replace inline links with unique references and a link table.
+
+		       EXTRACT LINKS    by Ingo Karkat
+							    *ExtractLinks.vim*
+description			|ExtractLinks-description|
+usage				|ExtractLinks-usage|
+installation			|ExtractLinks-installation|
+configuration			|ExtractLinks-configuration|
+limitations			|ExtractLinks-limitations|
+known problems			|ExtractLinks-known-problems|
+todo				|ExtractLinks-todo|
+history				|ExtractLinks-history|
+
+==============================================================================
+DESCRIPTION					    *ExtractLinks-description*
+
+This plugin ...
+
+HOW IT WORKS								     *
+
+SOURCE									     *
+(Original Vim tip, Stack Overflow answer, ...)
+
+SEE ALSO								     *
+(Plugins offering complementary functionality, or plugins using this library.)
+
+RELATED WORKS								     *
+(Alternatives from other authors, other approaches, references not used here.)
+
+==============================================================================
+USAGE							  *ExtractLinks-usage*
+							  *:ExtractLinks*
+:[range]ExtractLinks [x]
+			Extract all links in [range] / the buffer with a
+			(filetype-specific, by default "[N]") unique
+			reference, and generate a corresponding link table
+			that associates the references with the respective
+			original links (default: "[N] {link}"). This is placed
+			into register [x] / the default register, so it can be >
+			    :$put
+<			into the buffer (probably at the end, as a legend).
+
+EXAMPLE							*ExtractLinks-example*
+
+==============================================================================
+INSTALLATION					   *ExtractLinks-installation*
+
+This script is packaged as a |vimball|. If you have the "gunzip" decompressor
+in your PATH, simply edit the *.vmb.gz package in Vim; otherwise, decompress
+the archive first, e.g. using WinZip. Inside Vim, install by sourcing the
+vimball or via the |:UseVimball| command. >
+    vim ExtractLinks*.vmb.gz
+    :so %
+To uninstall, use the |:RmVimball| command.
+
+DEPENDENCIES					   *ExtractLinks-dependencies*
+
+- Requires Vim 7.0 or higher.
+- Requires the |ingo-library.vim| plugin (vimscript #4433), version 1.015 or
+  higher.
+- Requires the |ExtractMatches.vim| plugin (vimscript #4795), version 1.00 or
+  higher.
+
+==============================================================================
+CONFIGURATION					  *ExtractLinks-configuration*
+
+For a permanent configuration, put the following commands into your |vimrc|:
+		     *b:ExtractLinks_Expressions* *g:ExtractLinks_Expressions*
+A Dictionary (to avoid multiple identical entries) containing regular
+expressions (as keys, the values are irrelevant) to capture links in the
+buffer: >
+    let g:ExtractLinks_Expressions = {'\<link: \S\+\>', 1}
+<
+	 *b:ExtractLinks_ReplacementInline* *g:ExtractLinks_ReplacementInline*
+The replacement of the matched link inside the buffer: >
+    let g:ExtractLinks_ReplacementInline = '[\#]'
+<*b:ExtractLinks_ReplacementExtraction* *g:ExtractLinks_ReplacementExtraction*
+The replacement of the matched link for the link table: >
+    let g:ExtractLinks_ReplacementExtraction = '[\#] &\n'
+<
+==============================================================================
+LIMITATIONS					    *ExtractLinks-limitations*
+
+KNOWN PROBLEMS					 *ExtractLinks-known-problems*
+
+TODO							   *ExtractLinks-todo*
+
+IDEAS							  *ExtractLinks-ideas*
+
+==============================================================================
+HISTORY							*ExtractLinks-history*
+
+GOAL
+First published version.
+
+0.01	19-Feb-2014
+Started development.
+
+==============================================================================
+Copyright: (C) 2014 Ingo Karkat
+The VIM LICENSE applies to this plugin; see |copyright|.
+
+Maintainer:	Ingo Karkat <ingo@karkat.de>
+==============================================================================
+ vim:tw=78:ts=8:ft=help:norl:
