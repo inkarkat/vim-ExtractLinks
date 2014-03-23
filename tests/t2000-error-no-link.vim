@@ -3,11 +3,6 @@
 call setline(1, 'Nothing to see here.')
 call vimtest#StartTap()
 call vimtap#Plan(1)
-try
-    ExtractLinks
-    call vimtap#Fail('expected E486')
-catch
-    call vimtap#err#ThrownLike('E486: Pattern not found:', 'E486 thrown')
-endtry
+call vimtap#err#ErrorsLike('E486: Pattern not found:', 'ExtractLinks', 'E486 thrown')
 
 call vimtest#Quit()
