@@ -37,8 +37,8 @@ pattern and replacement definitions for:
 
 SOURCE									     *
 
-Inspired by
-http://superuser.com/questions/717946/links-to-references-in-mutt-or-vim
+- Inspired by
+  http://superuser.com/questions/717946/links-to-references-in-mutt-or-vim
 
 ==============================================================================
 USAGE							  *ExtractLinks-usage*
@@ -117,7 +117,7 @@ First published version.
 Started development.
 
 ==============================================================================
-Copyright: (C) 2014 Ingo Karkat
+Copyright: (C) 2014-2019 Ingo Karkat
 The VIM LICENSE applies to this plugin; see |copyright|.
 
 Maintainer:	Ingo Karkat <ingo@karkat.de>
