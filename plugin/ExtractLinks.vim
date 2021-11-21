@@ -10,6 +10,7 @@
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
 "
 " REVISION	DATE		REMARKS
+"   1.00.002	20-Feb-2014	Also provide default Expressions configuration.
 "	001	19-Feb-2014	file creation
 
 " Avoid installing twice or when in unsupported Vim version.
@@ -20,6 +21,9 @@ let g:loaded_ExtractLinks = 1
 
 "- configuration ---------------------------------------------------------------
 
+if ! exists('g:ExtractLinks_Expressions')
+    let g:ExtractLinks_Expressions = {'\%(^\|\s\|[(<\[{]\)\@<=\%(\%(file\|ftp\|gopher\|http\|https\|news\|scp\|ssh\|telnet\):\|\a\+://\)[^ \t<>''"]\+[^ \t.,;:!?)<>]': 'default'}
+endif
 if ! exists('g:ExtractLinks_ReplacementInline')
     let g:ExtractLinks_ReplacementInline = '[\#]'
 endif
