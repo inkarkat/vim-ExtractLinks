@@ -9,10 +9,16 @@
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
 "
 " REVISION	DATE		REMARKS
+"   1.00.002	20-Feb-2014	Need to filter out the expression from
+"				html_ExtractLinks.vim.
 "	001	19-Feb-2014	file creation
 
 if ! exists('b:ExtractLinks_Expressions')
     let b:ExtractLinks_Expressions = {}
+else
+    " Remove the conflicting expression for HTML, as Markdown leverages that
+    " filetype.
+    call filter(b:ExtractLinks_Expressions, 'v:val !=# "html"')
 endif
 let b:ExtractLinks_Expressions['\(!\?\)\[\([^]]\+\)\] \?(\([^)]\+\))'] = 'markdown'
 
