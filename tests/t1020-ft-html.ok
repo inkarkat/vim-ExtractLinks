@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<body>
+<p>Enim aliquam quam, nec condimentum orci augue vel magna. Nulla facilisi. Donec
+ipsum enim, congue in, tempus id, <a href="#ref1" class="reference">[1]</a> pulvinar sagittis, leo.
+blandit auctor. Nulla congue urna quis lorem. Nam rhoncus pede sed nunc. Etiam
+vitae quam. Fusce feugiat pede vel quam. In et augue.</p>
+
+<p>Lorem ipsum <a href="#ref2" class="reference">[2]</a> dolor sit amet, consectetuer adipiscing elit.</p>
+
+<p>Phasellus mollis dictum nulla. Integer vitae neque vitae eros fringilla rutrum.
+Vestibulum in pede adipiscing mi SSH <a href="#ref3" class="reference">[3]</a> dapibus condimentum.
+condimentum in, malesuada eget, pretium ut, sapien. Suspendisse placerat lectus
+venenatis lorem. Sed <a href="#ref4" class="reference">[4]</a> accumsan aliquam enim.
+purus, non <a href="mailto:someone@here.com">mail him</a> augue. Sed mauris.
+Nam a sapien. Aenean <a href="#ref2" class="reference">[2]</a> rutrum dictum sapien.
+Fusce pharetra elementum ligula. Nunc eu mi non augue iaculis facilisis. Morbi
+interdum, rhoncus ac, vestibulum <a href="#ref5" class="reference">[5]</a> ut.
+</p>
+<ol class="references">
+<li id="ref1"> http://yahoo.com </li>
+<li id="ref2"> <a href="http://www.foo.com/">foo</a> </li>
+<li id="ref3"> ssh://ingo@gaga.foo.com </li>
+<li id="ref4"> The book of wisdom, Harper 2002 </li>
+<li id="ref5"> <a href="http://gaga.org/la/le/lu" class="external">la-le-lu</a> </li>
+</ol>
+</body>
+
+</html>
