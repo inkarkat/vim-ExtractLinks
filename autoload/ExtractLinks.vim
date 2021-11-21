@@ -2,6 +2,7 @@
 "
 " DEPENDENCIES:
 "   - ingo/err.vim autoload script
+"   - ingo/plugin/setting.vim autoload script
 "   - ExtractMatches.vim plugin (for :SubstituteAndYankUnique)
 "
 " Copyright: (C) 2014 Ingo Karkat
@@ -10,7 +11,7 @@
 " Maintainer:	Ingo Karkat <ingo@karkat.de>
 "
 " REVISION	DATE		REMARKS
-"	001	19-Feb-2014	file creation
+"   1.00.001	19-Feb-2014	file creation
 let s:save_cpo = &cpo
 set cpo&vim
 
